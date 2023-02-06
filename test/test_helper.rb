@@ -1,5 +1,5 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "buildkite"
+require "gitea"
 
 require "minitest/autorun"
 require "faraday"
@@ -8,7 +8,7 @@ require "json"
 class Minitest::Test
 
   def set_client(stub)
-    Buildkite::Client.new(access_token: "abc123", adapter: :test, stubs: stub)
+    Gitea::Client.new(url: "https://gitea.com", access_token: "abc123", adapter: :test, stubs: stub)
   end
 
   def stub_response(fixture:, status: 200, headers: {"Content-Type" => "application/json"})
