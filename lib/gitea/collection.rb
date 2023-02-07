@@ -2,8 +2,12 @@ module Gitea
   class Collection
     attr_reader :data, :total
 
-    def self.from_response(response, type:)
+    def self.from_response(response, type:, kind: nil)
       body = response.body
+
+      if kind
+        body = body[kind]
+      end
 
       new(
         data: body.map { |attrs| type.new(attrs) },

@@ -15,6 +15,8 @@ module Gitea
   autoload :OrgsResource, "gitea/resources/orgs"
   autoload :OrgHooksResource, "gitea/resources/org_hooks"
   autoload :UserReposResource, "gitea/resources/user_repos"
+  autoload :ReposResource, "gitea/resources/repos"
+  autoload :RepoHooksResource, "gitea/resources/repo_hooks"
 
   autoload :User, "gitea/objects/user"
   autoload :Email, "gitea/objects/email"

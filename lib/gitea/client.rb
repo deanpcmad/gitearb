@@ -29,6 +29,14 @@ module Gitea
       OrgHooksResource.new(self)
     end
 
+    def repos
+      ReposResource.new(self)
+    end
+
+    def repo_hooks
+      RepoHooksResource.new(self)
+    end
+
     def connection
       full_url = [url, "api/v1"].join("/")
 
