@@ -14,10 +14,12 @@ module Gitea
   autoload :UserResource, "gitea/resources/user"
   autoload :OrgsResource, "gitea/resources/orgs"
   autoload :OrgHooksResource, "gitea/resources/org_hooks"
+  autoload :UserReposResource, "gitea/resources/user_repos"
 
   autoload :User, "gitea/objects/user"
   autoload :Email, "gitea/objects/email"
   autoload :Org, "gitea/objects/org"
   autoload :Hook, "gitea/objects/hook"
+  autoload :Repo, "gitea/objects/repo"
 
 end

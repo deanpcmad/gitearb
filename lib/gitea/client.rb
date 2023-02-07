@@ -17,6 +17,10 @@ module Gitea
       UserResource.new(self)
     end
 
+    def user_repos
+      UserReposResource.new(self)
+    end
+
     def orgs
       OrgsResource.new(self)
     end
