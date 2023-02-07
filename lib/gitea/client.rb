@@ -17,6 +17,14 @@ module Gitea
       UserResource.new(self)
     end
 
+    def orgs
+      OrgsResource.new(self)
+    end
+
+    def org_hooks
+      OrgHooksResource.new(self)
+    end
+
     def connection
       full_url = [url, "api/v1"].join("/")
 
