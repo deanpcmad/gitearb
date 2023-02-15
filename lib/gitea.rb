@@ -17,11 +17,13 @@ module Gitea
   autoload :UserReposResource, "gitea/resources/user_repos"
   autoload :ReposResource, "gitea/resources/repos"
   autoload :RepoHooksResource, "gitea/resources/repo_hooks"
+  autoload :CommitStatusesResource, "gitea/resources/commit_statuses"
 
   autoload :User, "gitea/objects/user"
   autoload :Email, "gitea/objects/email"
   autoload :Org, "gitea/objects/org"
   autoload :Hook, "gitea/objects/hook"
   autoload :Repo, "gitea/objects/repo"
+  autoload :CommitStatus, "gitea/objects/commit_status"
 
 end

@@ -37,6 +37,10 @@ module Gitea
       RepoHooksResource.new(self)
     end
 
+    def commit_statuses
+      CommitStatusesResource.new(self)
+    end
+
     def connection
       full_url = [url, "api/v1"].join("/")
 
